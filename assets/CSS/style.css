@@ -1,0 +1,1099 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'League Spartan', sans-serif ;
+}
+
+body  {
+    background-color: rgba(244, 239, 224, 1);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(220, 158, 71, 0.95);
+}
+
+/*-- ------------------------------------------------HEADER------------------------------------------------------ */
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.7);
+    padding: 0 150px; /* marges internes de 150px à gauche et à droite */
+}
+
+nav .menu {
+    display: flex;
+    align-items: center; /* Pour que les éléments se mettent en ligne au centre dans la verticale */
+}
+
+nav .menu li {
+    margin-left: 20px; /* Espace entre les rubriques */
+}
+
+.header .logo_header img {
+    margin: 10px;
+    height: 60px;
+}
+
+nav .ouvrirMenu { /* Je stylise mon open, que je mets en none pour ne pas être visible en format ordi */
+    color: rgba(220, 158, 71, 0.95);
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+} 
+
+nav .menu .fermerMenu, .icons i { /* Je stylise les icônes, que je mets en none pour ne pas être visible en format ordi */
+    color: rgba(220, 158, 71, 0.95);
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.btn_connexion {
+    background-color: rgba(220, 158, 71, 0.95);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn_connexion:hover {
+    background-color: black;
+}
+
+.btn_connexion a {
+    color: white;
+}
+
+.btn_connexion i {
+    padding-right: 5px;
+}
+
+.li_deco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-------------------------------------------------------HOME------------------------------------------------------*/
+
+.div_home_texte {
+    margin-top: 250px;
+    margin-left: 70px;
+}
+
+.div_home_img { /*logo géant*/  
+    height: 500px;
+    width: 500px;
+    margin-top: 100px;
+}
+
+.div_home_parent { /*div text + div img*/
+    display: flex;
+    justify-content: space-between ; 
+}
+
+.div_home_texte h1 {
+    background-image: linear-gradient(90deg, rgba(220,158,71,1) 0%, rgba(212,218,140,1) 35%);
+    background-clip: text; /*Pour choisir de mettre le dégradé dans la police*/
+    color: transparent; /*Police transparente pour y voir le dégradé*/
+    font-size: 40px;
+}
+
+.div_home_texte h2 { 
+    font-weight: 100; /*Pour affiner mon texte*/
+}
+
+.btn_div_home {
+    background-color: rgba(220, 158, 71, 0.95);
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: 140px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn_div_home:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+/*-----------------------------------------ENCADRÉ CAROUSEL---------------------------------*/
+
+.div_parents_encadre { /* Je selectionne les parents pour pouvoir le bouger */
+    display: flex; /* Pour aligner le texte */
+    justify-content: center;
+    align-items: center;
+}
+
+.div_parents_encadre .div_enfant_encadre {
+    display: flex;
+    align-items: center;
+    flex-direction: row; 
+    border-radius: 15px;
+    width: 800px;
+}
+
+.div_enfant_encadre {
+    background-color: rgba(220, 158, 71, 0.416);
+}
+
+.div_parents_encadre .para_slider {
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+/*--------------------------------------CAROUSEL---------------------------------*/
+
+#paysages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    margin: 50px;
+}
+
+#img_paysages {
+    height: 300px;
+    width: 220px;
+    border-radius: 5px;
+}
+
+#gauche,
+#droite {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    margin: -30px;
+}
+
+#gauche {
+    left: 0;
+}
+
+#droite {
+    right: 0;
+}
+
+#paysages:hover #gauche,
+#paysages:hover #droite {
+    opacity: 1;
+}
+
+/*------------------------------------------A PROPOS----------------------------*/
+
+.para_introduce_parent {
+    background-color: rgba(220, 158, 71, 0.416);
+    border-radius: 15px;
+    width: 900px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.para_introduce {
+    text-align: center;
+}
+
+.para_introduce p {
+    padding-bottom: 5px;
+}
+
+.section_ap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 77.9vh;
+}
+
+/*---------------------------------------RECETTE DÉTAILLÉE---------------------------*/
+
+.icone_plus_titre i, .icone_plus_titre h1, .titre_recette {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.645);
+    margin: 30px;
+}
+
+.ingredients_et_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.para_preparation {
+    padding: 20px;
+}
+
+.para_preparation p {
+    padding-bottom: 5px;
+}
+
+.plat img {
+    width: 350px;
+    height: 350px;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.9);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recette_detaillee {
+    background-color: rgba(220, 158, 71, 0.416);
+    border-radius: 15px;
+    width: 900px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*---------------------------COMMENTAIRES--------------------------------------*/
+
+.form_commentaires {
+    background-color: rgba(220, 158, 71, 0.638);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.9);
+    margin: 30px;
+    padding: 20px;
+}
+
+.input_commentaires {
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+    border-radius: 3px;
+    border-left: 1px solid rgba(0, 0, 0, .3);
+    border-top: 1px solid rgba(0, 0, 0, .3);
+    margin-bottom: 10px;
+    width: 450px;
+    transition: all .3s;
+    padding: 0.5rem;
+}
+
+.input_commentaires:hover, .input_commentaires:focus {
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 4px 4px 60px 8px rgb(0, 0, 0, .1);
+}
+
+.form_commentaires h2 {
+    opacity: .7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.form_commentaires a {
+    color: white;
+}
+
+.post {
+    color: rgb(165, 95, 19);
+}
+
+.message_erreur {
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+    background-color: #dc3545;
+    width: 500px;
+}
+
+.btn_repondre {
+    background-color: rgba(220, 158, 71, 0.95);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+}
+
+.btn_repondre:hover {
+    background-color: black;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.section_reponses {
+    min-height: 77.9vh;
+}
+
+/*-------------------------------------------RECETTES-------------------------------------------*/
+.section_recettes {
+    min-height: 77.9vh;
+}
+
+.div_parents_photos_recettes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.div_parents_photos_recettes .recette {
+    height: 400px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(360deg, rgba(220,158,71,0.7) 23%, rgba(255,255,255,0.7) 100%);
+    margin: 40px;
+    display: flex;
+    flex-direction: column; /*Pour mettre le contenu à l'intérieur en colonne*/
+    align-items: center;
+}
+
+.div_parents_photos_recettes .recette:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.div_parents_photos_recettes div i {
+    margin-left: 20px;
+}
+
+.div_parents_photos_recettes div i:first-child {
+    margin-left: 0;
+}
+
+.div_parents_photos_recettes h2{
+    margin: 10px;
+    font-weight: 100;
+
+}
+
+.div_parents_photos_recettes img {
+    margin-top: 30px;
+    height: 170px;
+    width: 220px;
+    border-radius: 10px;
+}
+
+
+/*-----------------------------------------------------CONTACTEZ-NOUS---------------------------------------------*/
+.body { /*CN, CONNEXION, INSCRIPTION*/
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(90deg, rgba(220,158,71,1) 0%, rgba(0,0,0,1) 100%);
+    min-height: 77.9vh;
+} 
+
+.container_ctc {
+    position: relative; /* Car les ombres seront en absolute, par rapport au form */
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.contact { /*CN, CONNEXION, INSCRIPTION*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(255, 255, 255, .3);
+    padding: 3rem;
+    height: 450px;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, .2) ;
+}
+
+.div_input_submit {
+    display: flex;
+    justify-content: center;
+}
+
+.contact h1 {
+    opacity: .7;
+    font-size: 1.4rem;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    color: white;
+    text-align: center;
+}
+
+.mybody p {
+    font-size: 12px;
+}
+
+.input_field {
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+    border-radius: 3px;
+    border-left: 1px solid rgba(0, 0, 0, .3); /*à voir*/
+    border-top: 1px solid rgba(0, 0, 0, .3);
+    margin-bottom: 15px;
+    padding: 0.5rem;
+    transition: all .3s;
+    width: 400px;
+}
+
+.input_field2 { /*Pour les messages de cn et coms*/
+    height: 80px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.input_field:hover, .input_field:focus {
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 4px 4px 60px 8px rgb(0, 0, 0, .1);
+}
+
+.input_submit {
+    background-color: rgba(220, 158, 71, 0.95);
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.input_submit:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.shadow {
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px) ; /*Tous les éléments qui passent en dessous de mon ombre sont flous*/
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    position: absolute; /*Car on va les placer là où on le souhaite*/
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, .2);
+}
+
+.shadow1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+}
+
+.shadow2 {
+    height: 80px;
+    width: 80px;
+    top: 390px;
+    right: -20px;
+}
+
+.shadow3 {
+    height: 100px;
+    width: 100px;
+    top: 390px;
+    left: -50px;
+}
+
+.shadow4 {
+    height: 110px;
+    width: 110px;
+    top: -50px;
+    right: -50px;
+}
+
+/*--------------------------------------------CONNEXION / INSCRIPTION-----------------------------------*/
+
+.bodyy { /*CN, CONNEXION, INSCRIPTION*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(90deg, rgba(220,158,71,1) 0%, rgba(0,0,0,1) 100%);
+    min-height: 77.9vh;
+} 
+
+.contactt { /*CONNEXION / INSCRIPTION */
+    background: rgb(255, 255, 255, .3);
+    padding: 3rem;
+    height: 450px;
+    width: 410px;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, .2) ;
+    text-align: center;
+}
+
+.container_ctcc { /* Car les ombres seront en absolute, par rapport au form */
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.contactt { /*CONNEXION / INSCRIPTION */
+    background: rgb(255, 255, 255, .3);
+    padding: 3rem;
+    height: 450px;
+    width: 410px;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, .2) ;
+    text-align: center;
+}
+
+.contactt p {
+    margin-top: 5px;
+}
+
+.contactt h1, .bodyy p {
+    opacity: .7;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    color: white;
+    text-align: center;
+}
+
+.input_fieldd {
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+    border-radius: 50px;
+    border-left: 1px solid rgba(255, 255, 255, .3); /*à voir*/
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
+    margin-bottom: 15px;
+    padding: 1rem;
+    transition: all .3s;
+    width: 220px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    margin-bottom: 2em;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.input_fieldd:hover, .input_fieldd:focus {
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 4px 4px 60px 8px rgb(0, 0, 0, .1);
+}
+
+.input_submitt {
+    background-color: rgba(220, 158, 71, 0.95);
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.input_submitt:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.shadoww {
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px) ; /*Tous les éléments qui passent en dessous de mon ombre sont flous*/
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    position: absolute; /*Car on va les placer là où on le souhaite*/
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, .2);
+}
+
+.shadoww1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+}
+
+.shadoww2 {
+    height: 80px;
+    width: 80px;
+    bottom: -30px;
+    right: -20px;
+}
+
+.shadoww3 {
+    height: 100px;
+    width: 100px;
+    bottom: -30px;
+    left: -50px;
+}
+
+.shadoww4 {
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: -60px;
+}
+
+.signup, .signup a {     /* Pour la couleur de s'inscrire */
+   color: rgba(244, 239, 224, 1);
+}
+
+.signup:hover, .signup a:hover {
+    color: rgba(220, 158, 71, 0.95);
+    text-shadow: 2px 2px 6px rgb(0,0,0);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+/*----------------------------------------- MDP OUBLIÉ----------------------------------*/
+
+.body_forgot {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(90deg, rgba(220,158,71,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.form_forgot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(255, 255, 255, .3);
+    padding: 3rem;
+    width: 300px;
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, .2) ;
+    text-align: center;
+}
+
+.form_forgot h1,h3 {
+    opacity: .7;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    color: white;
+    text-align: center;
+}
+
+.input_forgot {
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
+    margin-bottom: 15px;
+    padding: 0.7rem;
+    transition: all .3s;
+    width: 220px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    margin-bottom: 1em;
+}
+
+.input_submit2 {
+    background-color: rgba(220, 158, 71, 0.95);
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input_submit2:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+/*-----------------------------------SCROLL ON TOP------------------------------*/
+.arrow {
+    display: flex;
+    font-size: 30px;
+    justify-content: flex-end;
+    margin: 20px;
+}
+/*-------------------------------------FOOTER--------------------------------*/
+
+.footer_class {
+    background-color: rgba(220, 158, 71, 0.95);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Pour espacer les div */
+    position: static;
+    height: 170px;
+}
+
+.footer_class i {
+    color: white;
+}
+
+.footer_icones {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 30px;
+}
+
+.footer_copyrights {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer_informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_informations a {
+    color: white;
+}
+
+.footer_informations p {
+    padding: 5px;
+}
+
+/*INFORMATIONS*/
+.para_introduce h2 {
+    margin-bottom: 5px;
+}
+
+/* -----------------------------------------------------RESPONSIVE------------------------------------------------- */ 
+
+/* Format tel */
+
+@media screen and (min-width:300px) and (max-width:599px) {
+
+    /*------------------------------------HOME--------------------------*/
+
+    .div_home_parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div_home_texte {
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+
+    .div_home_texte h2 {
+        font-size: 20px;
+        align-self: flex-start; /*Pour contrer la mise en place du dessous*/
+    }
+
+    .div_home_parent .div_home_texte { /*Pour mettre le bouton au milieu*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn_div_home {
+        margin-left: 0;
+    }
+
+    .div_home_img {
+        display: none;
+    }
+
+    .div_home_img img {
+        height: 270px;
+        width: 270px;
+    }
+
+    /*------------------------------------------------------CAROUSEL-------------------------------------------------*/
+
+    .div_parents_encadre .div_enfant_encadre { 
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .div_parents_encadre .para_slider {
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    #gauche, #droite {
+        margin: 62px;
+    }
+
+/*--------------------------------------------------------RECETTE DÉTAILLÉE---------------------------------------*/
+
+    .ingredients_et_img {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .plat img {
+        height: 200px;
+        width: 200px;
+        margin: 0;
+    }
+
+    .recette_detaillee {
+        width: 350px;
+    }
+
+    .titre_recette {
+        text-align: center;
+    } 
+
+    .para_preparation {
+        align-self: flex-start;
+    }
+
+    /*COMMENTAIRES*/
+
+    .input_commentaires {
+        width: 250px;
+    }
+
+    .message_erreur {
+        width: 295px;
+    }
+
+
+/*---------------------------------------------------------CONTACTEZ-NOUS----------------------------------------*/
+    .contact {
+        width: 290px;
+        align-items: center;
+    }
+
+    .input_field {
+        width: 250px;
+    }
+
+    .shadow1 {
+        height: 50px;
+        width: 50px;
+        top: -20px;
+        left: -20px;
+    }
+    
+    .shadow2 {
+        height: 50px;
+        width: 50px;
+        top: 410px;
+        right: -20px;
+    }
+    
+    .shadow3 {
+        height: 70px;
+        width: 70px;
+        top: 400px;
+        left: -20px;
+    }
+    
+    .shadow4 {
+        height: 70px;
+        width: 70px;
+        top: -20px;
+        right: -30px;
+    }
+
+/*---------------------------------------------------------A PROPOS----------------------------------------*/
+
+    .para_introduce_parent {
+        width: 350px;
+    }
+
+/*---------------------------------------------------------CONNEXION / INSCRIPTION----------------------------------------*/
+
+    .contactt {
+        width: 290px;
+    }
+
+    .shadoww1 {
+        height: 50px;
+        width: 50px;
+        top: -20px;
+        left: -20px;
+    }
+    
+    .shadoww2 {
+        height: 50px;
+        width: 50px;
+        top: 420px;
+        right: -10px;
+    }
+    
+    .shadoww3 {
+        height: 80px;
+        width: 80px;
+        top: 390px;
+        left: -20px;
+    }
+    
+    .shadoww4 {
+        height: 80px;
+        width: 80px;
+        top: -30px;
+        right: -30px;
+    }
+
+    .contactt p {
+        font-size: 1.1rem;
+    }
+
+/*---------------------------------------------------------FOOTER----------------------------------------*/
+
+    .footer_icones {
+        display: none;
+    }
+
+    .footer_class {
+        flex-direction: column-reverse;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Format tablette */
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    
+/*---------------------------------------------------------HOME--------------------------*/
+    .div_home_texte {
+        margin-top: 210px;
+    }
+
+    .div_home_img img {
+        height: 350px;
+        width: 350px;
+    }
+    
+    .div_parents_encadre .div_enfant_encadre { 
+        width: 700px;
+    }
+
+    
+    .div_home_parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .div_home_img {
+        display: flex;
+        align-self: center;
+        margin-left: 130px;
+    }
+
+/*-----------------------------------------------------------RECETTES DÉTAILLÉE----------------------------------------------*/
+
+    .recette_detaillee {
+        width: 580px;
+    }
+
+    .plat img {
+        width: 300px;
+        height: 300px;
+    }
+    
+/*---------------------------------------------------------CONTACTEZ-NOUS----------------------------------------*/
+    .contact {
+        width: 450px;
+        align-items: center;
+    }
+
+/*---------------------------------------------------------A PROPOS----------------------------------------*/
+    
+    .para_introduce_parent {
+        width: 700px;
+    }
+
+/*---------------------------------------------------------FOOTER----------------------------------------*/
+
+    .footer_icones {
+        display: none;
+    }
+
+    .footer_class {
+        flex-direction: column-reverse;
+    }
+
+}
+/* ----------------------------------------------------MENU BURGER----------------------------------------------- */
+
+@media(max-width: 900px) {
+
+    .header {
+        padding: 0;
+    }
+
+    nav .menu {
+        /*Pour que le burger fasse tout l'écran*/
+        display: none;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center; /*Pour mettre les rubriques au centre*/
+        align-items: center;
+        background-color: white;
+        transition: top 1s ease;
+
+    }
+
+    nav .menu .fermerMenu {
+        /* Icône fermer */
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .ouvrirMenu {
+        /* Icône ouvrir */
+        display: block;
+    }
+
+    nav .menu .li_header {
+        padding: 15px;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    nav .menu .li_header a:hover {
+        font-size: 1.6rem;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px; /*Espace entre les icônes*/
+    }
+
+    .header .logo_header img {
+        margin: 10px;
+        height: 45px; /*Taille du logo*/
+    }
+
+    .btn_connexion {
+        margin: 20px;
+    }
+}
